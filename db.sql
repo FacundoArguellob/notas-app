@@ -1,5 +1,5 @@
-CREATE DATABASE IF NOT EXISTS master_python;
-use master_python;
+CREATE DATABASE IF NOT EXISTS proyect_python;
+use proyect_python;
 
 
 CREATE TABLE usuarios(
@@ -12,6 +12,7 @@ CREATE TABLE usuarios(
 
     CONSTRAINT pk_usuarios PRIMARY KEY (id),
     CONSTRAINT uq_email UNIQUE(email)
+    
 )ENGINE=InnoDb;
 
 CREATE TABLE notas(
