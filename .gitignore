@@ -1,2 +1,4 @@
+logs/
 *.txt
-tools.py
+
+__pycache__/*
