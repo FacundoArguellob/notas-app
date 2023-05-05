@@ -5,10 +5,10 @@ from time import sleep
 
 def check_login():
     clean_screen()
-    #email = input("Email: ")
-    #password = input("Password: ")
-    email = "facuarg49@gmail.com"
-    password = "valeagus111"
+    email = input("Email: ")
+    password = input("Password: ")
+    #email = "facuarg49@gmail.com"
+    #password = "valeagus111"
     check_login = modelo.Usuario(any, any, email, password)
     login = check_login.login()
 
@@ -48,3 +48,5 @@ class Acciones:
             sleep(2)
         else:
             print("cantidad de intentos maxima")
+
+        return login

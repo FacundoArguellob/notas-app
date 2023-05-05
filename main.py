@@ -17,19 +17,20 @@ def eleccion_user():
 
 
 def inicio_asistente():
-    opcion = eleccion_user()
-    while opcion != "1" and opcion != "2":
+    while True:
         opcion = eleccion_user()
-
-    if opcion == "1":
-        hazEl.registro()
-    elif opcion == "2":
-        hazEl.login()
-
+        while opcion != "1" and opcion != "2":
+            opcion = eleccion_user()
+        if opcion == "1":
+            hazEl.registro()
+        elif opcion == "2":
+            login = hazEl.login()
+            break
+    return login
 
 def main():
-    #inicio_asistente()
-    asistente_notas.inicio_asistente()
+    login = inicio_asistente()
+    asistente_notas.inicio_asistente(login)
 main()
 
 

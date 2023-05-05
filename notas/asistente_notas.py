@@ -1,11 +1,13 @@
-from tools import clean_screen
+from  os import system
 from time import sleep
-
+from notas import acciones
+from usuarios import acciones as usuario
+#import usuarios.clases_usuario as usuario
 
 def menu():
     while True:
         try:
-            clean_screen()
+            system("clear")
             opcion = int(input("""
             Acciones disponibles:
             1- crear nota
@@ -25,5 +27,22 @@ def menu():
     return opcion
 
 
-def inicio_asistente():
+def eleccion(opcion, login):
+    if opcion == 1:
+        acciones.Acciones.crear(any, login)
+        sleep(1)
+        inicio_asistente()
+    if opcion == 2:
+        print("2")
+        sleep(1)
+        inicio_asistente()
+    if opcion == 3:
+        print("3")
+        sleep(1)
+        inicio_asistente()
+    if opcion == 4:
+        print("4")
+
+def inicio_asistente(login):
     opcion = menu()
+    eleccion(opcion, login)
