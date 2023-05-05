@@ -44,9 +44,7 @@ class Acciones:
             login = check_login()  
 
         if login:
-            print(f"Bienvendio {login[1]}")
+            print(f"Bienvenido/a {login[1]}")
             sleep(2)
         else:
             print("cantidad de intentos maxima")
-            
-            

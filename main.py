@@ -1,11 +1,12 @@
 from tools import clean_screen
 from usuarios import acciones
-
+import notas.asistente_notas as asistente_notas
 
 hazEl = acciones.Acciones()
 
 
 def eleccion_user():
+    clean_screen()
     opcion = input("""
         Acciones disponibles:
         Elige una de las opciones con numeros
@@ -16,10 +17,8 @@ def eleccion_user():
 
 
 def inicio_asistente():
-    clean_screen()
     opcion = eleccion_user()
     while opcion != "1" and opcion != "2":
-        clean_screen()
         opcion = eleccion_user()
 
     if opcion == "1":
@@ -29,7 +28,8 @@ def inicio_asistente():
 
 
 def main():
-    inicio_asistente()
+    #inicio_asistente()
+    asistente_notas.inicio_asistente()
 main()
 
 
