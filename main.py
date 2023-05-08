@@ -17,15 +17,16 @@ def eleccion_user():
 
 
 def inicio_asistente():
-    while True:
+    loginOk = false
+    while !loginOk:
         opcion = eleccion_user()
-        while opcion != "1" and opcion != "2":
+        while opcion != "1" or opcion != "2":
             opcion = eleccion_user()
         if opcion == "1":
             hazEl.registro()
-        elif opcion == "2":
+        else:
             login = hazEl.login()
-            break
+            loginOk = true
     return login
 
 def main():
