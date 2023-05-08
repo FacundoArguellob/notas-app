@@ -31,17 +31,17 @@ def eleccion(opcion, login):
     if opcion == 1:
         acciones.Acciones.crear(any, login)
         sleep(1)
-        inicio_asistente()
+        inicio_asistente(login)
     if opcion == 2:
-        print("2")
+        acciones.Acciones.mostrar(any, login)
         sleep(1)
-        inicio_asistente()
+        inicio_asistente(login)
     if opcion == 3:
-        print("3")
+        acciones.Acciones.borrar_nota(any, login)
         sleep(1)
-        inicio_asistente()
+        inicio_asistente(login)
     if opcion == 4:
-        print("4")
+        print("Hasta luego!")
 
 def inicio_asistente(login):
     opcion = menu()

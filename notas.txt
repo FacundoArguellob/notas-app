@@ -6,3 +6,26 @@ Proyecto Python y Mysql:
 -si elegimos login, identidicar al usuario y empieza el menu de notas
 -crear notas, mostrarlas, borrarlas
 """
+
+
+2000 2500
+
+telecom fucion con cablevision
+
+9 a 18 corporativos
+
+migrar a fibra optica
+
+van a cambiar el modem
+
+cargar la migracion 
+
+siempre que te llaman es para cagarte o venderte 
+
+que pasa con los que no 
+
+respuesta negativa: te cortan, no quieren, desconfian, 
+
+objetivos: 
+
+esta pasando esto 

@@ -1,36 +1,47 @@
 from tools import clean_screen
 from usuarios import acciones
 import notas.asistente_notas as asistente_notas
-
+from time import sleep
 hazEl = acciones.Acciones()
 
 
-def eleccion_user():
+def menu():
     clean_screen()
     opcion = input("""
         Acciones disponibles:
         Elige una de las opciones con numeros
             -1 Registro
             -2 Login
+            -3 Salida
         """)
+    while opcion != "1" and opcion != "2" and opcion != "3":
+            clean_screen()
+            print("Introduce un numero correcto!")
+            sleep(2)
     return opcion
-
 
 def inicio_asistente():
     while True:
-        opcion = eleccion_user()
-        while opcion != "1" and opcion != "2":
-            opcion = eleccion_user()
+        opcion = menu()
         if opcion == "1":
             hazEl.registro()
+            kill = any
         elif opcion == "2":
             login = hazEl.login()
+            kill = any
             break
-    return login
+        elif opcion == "3":
+            print("Hasta luego!")
+            kill = True
+            login = any
+            break
+    return login, kill
 
 def main():
-    login = inicio_asistente()
-    asistente_notas.inicio_asistente(login)
+    
+    login, kill = inicio_asistente()
+    if kill == any:
+        asistente_notas.inicio_asistente(login)
 main()
 
 

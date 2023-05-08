@@ -7,8 +7,8 @@ def check_login():
     clean_screen()
     email = input("Email: ")
     password = input("Password: ")
-    #email = "facuarg49@gmail.com"
-    #password = "valeagus111"
+    #email = "admin@admin.com"
+    #password = "admin"
     check_login = modelo.Usuario(any, any, email, password)
     login = check_login.login()
 
@@ -27,7 +27,9 @@ class Acciones:
         registro = usuario.registro()
 
         if registro[0] >= 1:
+            clean_screen()
             print(f"Te haz registrado exitosamente {registro[1].nombre}")
+            sleep(2)
         else:
             print("ERROR")
 
