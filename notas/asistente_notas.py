@@ -3,6 +3,7 @@ from time import sleep
 from notas import acciones
 from usuarios import acciones as usuario
 #import usuarios.clases_usuario as usuario
+test = 0
 
 def menu():
     while True:
@@ -20,7 +21,7 @@ def menu():
                 break
             else:
                 print("escribe un numero entre 1 y 4")
-                sleep(1)
+                sleep(test)
         except ValueError:
             print("introduce un numero por favor")
             sleep(2)
@@ -30,15 +31,15 @@ def menu():
 def eleccion(opcion, login):
     if opcion == 1:
         acciones.Acciones.crear(any, login)
-        sleep(1)
+        sleep(test)
         inicio_asistente(login)
     if opcion == 2:
         acciones.Acciones.mostrar(any, login)
-        sleep(1)
+        sleep(test)
         inicio_asistente(login)
     if opcion == 3:
         acciones.Acciones.borrar_nota(any, login)
-        sleep(1)
+        sleep(test)
         inicio_asistente(login)
     if opcion == 4:
         print("Hasta luego!")

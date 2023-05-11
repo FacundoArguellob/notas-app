@@ -2,9 +2,10 @@ from tools import clean_screen
 from usuarios import acciones
 import notas.asistente_notas as asistente_notas
 from time import sleep
+
 hazEl = acciones.Acciones()
 
-
+sleep_time = 2
 def menu():
     clean_screen()
     opcion = input("""
@@ -17,7 +18,7 @@ def menu():
     while opcion != "1" and opcion != "2" and opcion != "3":
             clean_screen()
             print("Introduce un numero correcto!")
-            sleep(2)
+            sleep(sleep_time)
     return opcion
 
 def inicio_asistente():
@@ -38,12 +39,7 @@ def inicio_asistente():
     return login, kill
 
 def main():
-    
     login, kill = inicio_asistente()
-    if kill == any:
+    if kill:
         asistente_notas.inicio_asistente(login)
 main()
-
-
-#facuarg49@gmail.com
-#valeagus111
